@@ -3,7 +3,8 @@
   "name": "web-wasm",
   "version": "0.1.0",
   "scripts": {
-    "build": "rimraf dist pkg && npm run build:wasm && vite build",
+    "build": "rimraf dist pkg && npm run build:wasm && npm run build:web",
+    "build:web": "vite build --base './'",
     "build:wasm": "node etc/wasm-pack.mjs",
     "dev": "vite dev",
     "start": "vite dev",
